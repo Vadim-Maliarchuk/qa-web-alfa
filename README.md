@@ -5,4 +5,5 @@
 Запуск тестов
 
 установить зависимости npm i
+
 для запуска GUI cypress npm run cy:open
