@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 import authorization from '../pageObjects/authorization';
 import { errorText, erroneousTestData } from '../fixtures/authorization.json';
 

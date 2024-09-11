@@ -1,8 +1,3 @@
-// ***********************************************
-// https://on.cypress.io/custom-commands
-// ***********************************************
-/// <reference types="cypress" />
-
 import authorization from '../pageObjects/authorization';
 
 Cypress.Commands.add('getCsrfToken', () => {

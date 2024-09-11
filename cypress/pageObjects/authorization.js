@@ -1,11 +1,4 @@
-/// <reference types="cypress" />
-
 class Authorization {
-
-  constructor() {
-    this.validBorderColor = 'rgb(40, 167, 69)';
-    this.invalidBorderColor = 'rgb(220, 53, 69)';
-  }
 
   get loginField() { return '#loginform-username'; }
   get passwordField() { return '#loginform-password'; }

@@ -1,4 +1,5 @@
 const { defineConfig } = require('cypress');
+require('dotenv').config();
 const fs = require('fs');
 
 module.exports = defineConfig({
@@ -10,20 +11,14 @@ module.exports = defineConfig({
     openMode: 0
   },
   env: {
-    USER_LOGIN: 'test',
-    USER_PASS: 'test',
-    REGISTRATION_NAME: 'test',
-    REGISTRATION_EMAIL: 'test@gmail.com',
-    REGISTRATION_PASS: '1234',
-    LOGIN_URL: 'https://enotes.pointschool.ru/login',
-    CREATE_BASKET_URL: 'https://enotes.pointschool.ru/basket/create',
-    CLEAR_BASKET_URL: 'http://enotes.pointschool.ru/basket/clear',
-    GET_BASKET_URL: 'http://enotes.pointschool.ru/basket/get'
+    USER_LOGIN: process.env.USER_LOGIN,
+    USER_PASS: process.env.USER_PASS,
+    LOGIN_URL: process.env.LOGIN_URL,
+    CREATE_BASKET_URL: process.env.CREATE_BASKET_URL,
+    CLEAR_BASKET_URL: process.env.CLEAR_BASKET_URL,
+    GET_BASKET_URL: process.env.GET_BASKET_URL,
   },
   e2e: {
     baseUrl: 'https://enotes.pointschool.ru/',
-    setupNodeEvents(on, config) {
-      return config;
-    }
   }
 });

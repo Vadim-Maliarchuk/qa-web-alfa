@@ -1,9 +1,6 @@
-/// <reference types="cypress" />
-
 import { convertStringToNumber } from '../support/helpers/convertStringToNumber';
 
 class Shopbooks {
-
 
   get basketContainer() { return '#basketContainer'; }
   get dropdownMenu() { return '.dropdown-menu.show'; }
@@ -12,7 +9,6 @@ class Shopbooks {
   get itemsPageWithDiscount() { return `${this.itemsPage}.hasDiscount`; }
   get itemsPageWithoutDiscount() { return `${this.itemsPage}:not(.hasDiscount)`; }
   get itemBuyButton() { return '.actionBuyProduct'; }
-
 
   isReady() {
     cy.get(this.itemsPage).should('be.visible');

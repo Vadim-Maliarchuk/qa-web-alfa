@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 import shopbooks from '../pageObjects/shopbooks';
 
 describe('Shopbooks', () => {
